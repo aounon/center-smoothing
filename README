@@ -1,0 +1,21 @@
+This is the code for the paper titled 'Center Smoothing for Certifiably Robust Vector-Valued Functions'.
+The main code for Center Smoothing procedure is available in the file center_smoothing.py.
+The model architectures are available in model.py.
+
+Download and place the CelebA dataset in a directory with the name 'data'.
+
+To train models run:
+
+python train_face_rec.py [path to save trained model] --sigma [value of sigma]
+python train_dim_red.py [path to save trained model] [dataset] --latent_dim [number of latent dimensions] --sigma [value of sigma]
+python train_reconstructor.py [path to save trained model] [dataset] [path to measurement matrix] --sigma [value of sigma]
+
+To generate certificates run:
+
+python test_face_rec.py [path to trained model] [path to save certificates] --eps_in [value of epsilon in] --sigma [value of sigma]
+python test_dim_red.py [path to trained model] [path to save certificates] [dataset] --eps_in [value of epsilon in] --sigma [value of sigma] --latent_dim [number of latent dimensions]
+python test_reconstructor.py [path to trained model] [path to save certificates] [dataset] [path to measurement matrix] --eps_in [value of epsilon in] --sigma [value of sigma]
+
+To compute median certificate run:
+
+python get_median_cert.py [path to certificate file]
