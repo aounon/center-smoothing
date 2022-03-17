@@ -1,6 +1,6 @@
 # Center Smoothing
 
-This is the code repository for the paper titled Center Smoothing: Provable Robustness for Functions with Metric-Space Outputs.
+This is the code repository for the paper titled [Center Smoothing: Certified Robustness for Networks with Structured Outputs](https://arxiv.org/abs/2102.09701).
 The main code for Center Smoothing procedure is available in the file center_smoothing.py.
 The model architectures are available in models.py.
 Various distance functions used in the experiments can be found in distance_functions.py.
